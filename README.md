@@ -78,7 +78,7 @@ The `store` method allows you to securely store and retrieve encrypted data. Thi
 You can use the built-in `MemoryStore` as a simple solution for in-memory storage of encrypted data.
 
 ```ts
-import { MemoryStore } from "your-encryption-sdk";
+import { MemoryStore } from "cryptex-js";
 
 const store = new MemoryStore();
 ```
@@ -88,7 +88,8 @@ const store = new MemoryStore();
 If you want to persist the encrypted data in a custom storage solution (e.g., database), you can extend the `MemoryStore` class or implement your own `Store` class.
 
 ```ts
-import { MemoryStore } from 'your-encryption-sdk';
+
+import { MemoryStore } from 'cryptex-js';
 
 class CustomStore extends MemoryStore {
   store(data: { userKey: string; hash: string; version: number }): void {
